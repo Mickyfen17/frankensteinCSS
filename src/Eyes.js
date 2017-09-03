@@ -13,36 +13,44 @@ const EyeBrows = glamorous.div({
   width: '160px',
   margin: '0 auto',
   background: 'linear-gradient(to right, #2c2b2d 50%, #363537 50%)',
-  borderRadius: '10px',
+  borderRadius: '4px',
 });
 
-const LeftEye = glamorous.div({
+const Eye = glamorous.div(props => ({
   position: 'absolute',
-  left: '35px',
-  height: '25px',
-  width: '40px',
-  background: '#FFF',
+  right: props.right && '35px',
+  left: props.left && '35px',
+  zIndex: 2,
+  height: '22px',
+  width: '43px',
+  background: '#d0dcbc',
   borderBottomLeftRadius: '50px',
   borderBottomRightRadius: '50px',
-});
+}));
 
-const RightEye = glamorous.div({
+const EyeOutline = glamorous.div(props => ({
   position: 'absolute',
-  right: '35px',
-  height: '25px',
-  width: '40px',
-  background: '#FFF',
+  right: props.right && '32px',
+  left: props.left && '32px',
+  zIndex: props.inner && 1,
+  height: props.inner ? '27px' : '33px',
+  width: props.inner ? '49px' : '55px',
+  background: props.inner ? '#4c474b' : '#383337',
   borderBottomLeftRadius: '50px',
   borderBottomRightRadius: '50px',
-});
+}));
 
 class Eyes extends Component {
   render() {
     return (
       <EyeWrapper>
         <EyeBrows />
-        <LeftEye />
-        <RightEye />
+        <Eye right />
+        <EyeOutline right inner />
+        <EyeOutline right />
+        <Eye left />
+        <EyeOutline left inner />
+        <EyeOutline left />
       </EyeWrapper>
     );
   }

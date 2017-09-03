@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import Eyes from './Eyes';
+import Accessories from './Accessories';
 import './App.css';
 
 const Section = glamorous.section({
@@ -24,7 +25,7 @@ const Hair = glamorous.div({
 const Face = glamorous.div({
   position: 'relative',
   display: 'flex',
-  height: '215px',
+  height: '200px',
   width: '200px',
   background: 'linear-gradient(to right, #99c46e 50%, #add882 50%)',
   borderBottom: '6px solid #7ba650',
@@ -39,7 +40,7 @@ const Mouth = glamorous.div({
   bottom: '40px',
   left: '0',
   right: '0',
-  height: '10px',
+  height: '8px',
   width: '100px',
   margin: '0 auto',
   background: 'linear-gradient(to right, #2c2b2d 50%, #363537 50%)',
@@ -66,6 +67,7 @@ class App extends Component {
           <Mouth />
         </Face>
         <Neck />
+        <Accessories />
       </Section>
     );
   }

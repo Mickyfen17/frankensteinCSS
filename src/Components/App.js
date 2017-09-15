@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import Eyes from './Eyes';
 import Accessories from './Accessories';
-import './App.css';
 
 const Section = glamorous.section({
   display: 'flex',

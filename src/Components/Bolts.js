@@ -3,27 +3,25 @@ import glamorous from 'glamorous';
 
 const BoltWrapper = glamorous.div({
   position: 'absolute',
-  bottom: '180px',
+  bottom: '210px',
   display: 'flex',
+  justifyContent: 'space-between',
+  width: '200px',
 });
 
-const BoltHead = glamorous.div(props => ({
-  position: 'absolute',
-  right: props.right && '70px',
-  left: props.left && '70px',
-  bottom: '40px',
-  height: '22px',
+const BoltHeadWrapper = glamorous.div(props => ({
   width: '15px',
+  margin: props.right ? '0 10px 0 0' : '0 0 0 10px',
+}));
+
+const BoltHeadMiddle = glamorous.div(props => ({
+  height: '20px',
   background: '#d0dcbc',
   borderRadius: '4px',
 }));
 
 const BoltHeadOuter = glamorous.div(props => ({
-  position: 'absolute',
   height: '12px',
-  width: '15px',
-  top: props.bottom && '15px',
-  bottom: props.top && '15px',
   background: props.bottom ? '#b2be9e' : '#e4f0d0',
   borderRadius: '4px',
 }));
@@ -32,14 +30,16 @@ class Bolts extends Component {
   render() {
     return (
       <BoltWrapper id="bolt-wrapper">
-        <BoltHead right>
-          <BoltHeadOuter right top />
-          <BoltHeadOuter right bottom />
-        </BoltHead>
-        <BoltHead left>
-          <BoltHeadOuter left top />
-          <BoltHeadOuter left bottom />
-        </BoltHead>
+        <BoltHeadWrapper left>
+          <BoltHeadOuter top />
+          <BoltHeadMiddle />
+          <BoltHeadOuter bottom />
+        </BoltHeadWrapper>
+        <BoltHeadWrapper right>
+          <BoltHeadOuter top />
+          <BoltHeadMiddle />
+          <BoltHeadOuter bottom />
+        </BoltHeadWrapper>
       </BoltWrapper>
     );
   }

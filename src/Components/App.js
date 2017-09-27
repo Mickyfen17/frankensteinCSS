@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import Eyes from './Eyes';
-import Accessories from './Accessories';
+import Bolts from './Bolts';
 
 const Section = glamorous.section({
   display: 'flex',
@@ -66,7 +66,7 @@ class App extends Component {
           <Mouth />
         </Face>
         <Neck />
-        <Accessories />
+        <Bolts />
       </Section>
     );
   }

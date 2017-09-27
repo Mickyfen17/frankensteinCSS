@@ -40,6 +40,11 @@ const EyeOutline = glamorous.div(props => ({
   borderBottomRightRadius: '50px',
 }));
 
+const EyeShadow = glamorous(EyeOutline)(props => ({
+  right: props.right && '29px',
+  left: props.left && '29px',
+}));
+
 class Eyes extends Component {
   render() {
     return (
@@ -47,10 +52,10 @@ class Eyes extends Component {
         <EyeBrows />
         <Eye right />
         <EyeOutline right inner />
-        <EyeOutline right />
+        <EyeShadow right />
         <Eye left />
         <EyeOutline left inner />
-        <EyeOutline left />
+        <EyeShadow left />
       </EyeWrapper>
     );
   }

@@ -3,6 +3,7 @@ import glamorous from 'glamorous';
 import Eyes from './Eyes';
 import Bolts from './Bolts';
 import Scars from './Scars';
+import Fringe from './Fringe';
 
 const Section = glamorous.section({
   display: 'flex',
@@ -63,6 +64,7 @@ class App extends Component {
       <Section>
         <Hair />
         <Face>
+          <Fringe />
           <Scars />
           <Eyes />
           <Mouth />

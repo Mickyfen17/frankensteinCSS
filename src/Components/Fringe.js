@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import glamorous from 'glamorous';
+import Stitches from './Stitches';
 
 const FringeWrapper = glamorous.div({
   position: 'absolute',
@@ -30,6 +31,7 @@ class Fringe extends Component {
         <HairLeft dark long left />
         <HairLeft dark short />
         <HairRight light long />
+        <Stitches />
       </FringeWrapper>
     )
   }

@@ -10,36 +10,26 @@ const BoltWrapper = glamorous.div({
 });
 
 const BoltHeadWrapper = glamorous.div(props => ({
-  width: '18px',
-  margin: props.right ? '0 10px 0 0' : '0 0 0 10px',
+  width: '16px',
+  margin: props.right ? '0 16px 0 0' : '0 0 0 16px',
 }));
 
 const BoltShaftWrapper = glamorous.div(props => ({
   position: 'absolute',
-  top: '8px',
-  right: props.right && '28px',
-  left: props.left && '28px',
-  width: '22px',
+  top: '6px',
+  right: props.right && '32px',
+  left: props.left && '32px',
+  width: '18px',
 }));
 
 const BoltMiddle = glamorous.div(props => ({
   position: 'relative',
-  height: props.head ? '20px' : '8px',
+  height: props.head ? '18px' : '6px',
   background: '#d0dcbc',
   borderRadius: props.head ? '4px' : '0',
-}));
-
-const BoltHeadOuter = glamorous.div(props => ({
-  height: '12px',
-  background: props.bottom ? '#b2be9e' : '#e4f0d0',
-  borderRadius: '4px',
-  margin: props.top ? '0 0 -6px 0' : '-6px 0 0 0',
-}));
-
-const BoltShaftOuter = glamorous(BoltHeadOuter)(props => ({
-  height: '8px',
-  borderRadius: '0',
-  margin: props.top ? '0 0 -4px 0' : '-4px 0 0 0',
+  boxShadow: props.head
+    ? '0 5px #b2be9e, 0 -5px #e4f0d0'
+    : '0 4px #b2be9e, 0 -4px #e4f0d0',
 }));
 
 class Bolts extends Component {
@@ -47,24 +37,16 @@ class Bolts extends Component {
     return (
       <BoltWrapper id="bolt-wrapper">
         <BoltHeadWrapper left>
-          <BoltHeadOuter top head />
           <BoltMiddle head />
-          <BoltHeadOuter bottom head />
         </BoltHeadWrapper>
         <BoltShaftWrapper left>
-          <BoltShaftOuter top />
           <BoltMiddle />
-          <BoltShaftOuter bottom />
         </BoltShaftWrapper>
         <BoltShaftWrapper right>
-          <BoltShaftOuter top />
           <BoltMiddle />
-          <BoltShaftOuter bottom />
         </BoltShaftWrapper>
         <BoltHeadWrapper right>
-          <BoltHeadOuter top head />
           <BoltMiddle head />
-          <BoltHeadOuter bottom head />
         </BoltHeadWrapper>
       </BoltWrapper>
     );

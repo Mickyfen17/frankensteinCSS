@@ -3,7 +3,7 @@ import glamorous from 'glamorous';
 
 const BoltWrapper = glamorous.div({
   position: 'absolute',
-  bottom: '220px',
+  bottom: '195px',
   display: 'flex',
   justifyContent: 'space-between',
   width: '200px',

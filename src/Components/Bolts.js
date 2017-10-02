@@ -9,7 +9,7 @@ import {
 class Bolts extends Component {
   render() {
     return (
-      <BoltWrapper id="bolt-wrapper">
+      <BoltWrapper>
         <BoltHeadWrapper left>
           <BoltMiddle head />
         </BoltHeadWrapper>

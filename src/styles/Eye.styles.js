@@ -23,25 +23,8 @@ const Eye = glamorous.div(props => ({
   height: '22px',
   width: '43px',
   background: '#d0dcbc',
-  borderBottomLeftRadius: '50px',
-  borderBottomRightRadius: '50px',
+  borderRadius: '0 0 50px 50px',
+  boxShadow: '0 3px 0 3px #4c474b, 0 6px 0 6px #383337',
 }));
 
-const EyeOutline = glamorous.div(props => ({
-  position: 'absolute',
-  right: props.right && '32px',
-  left: props.left && '32px',
-  zIndex: props.inner && 1,
-  height: props.inner ? '27px' : '33px',
-  width: props.inner ? '49px' : '55px',
-  background: props.inner ? '#4c474b' : '#383337',
-  borderBottomLeftRadius: '50px',
-  borderBottomRightRadius: '50px',
-}));
-
-const EyeShadow = glamorous(EyeOutline)(props => ({
-  right: props.right && '29px',
-  left: props.left && '29px',
-}));
-
-export { EyeWrapper, EyeBrows, Eye, EyeOutline, EyeShadow };
+export { EyeWrapper, EyeBrows, Eye };

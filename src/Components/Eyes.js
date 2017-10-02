@@ -13,11 +13,7 @@ class Eyes extends Component {
       <EyeWrapper>
         <EyeBrows />
         <Eye right />
-        <EyeOutline right inner />
-        <EyeShadow right />
         <Eye left />
-        <EyeOutline left inner />
-        <EyeShadow left />
       </EyeWrapper>
     );
   }

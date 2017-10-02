@@ -4,6 +4,7 @@ import Eyes from './Eyes';
 import Bolts from './Bolts';
 import Scars from './Scars';
 import Fringe from './Fringe';
+import Header from './Header';
 
 const Section = glamorous.section({
   display: 'flex',
@@ -62,6 +63,7 @@ class App extends Component {
   render() {
     return (
       <Section>
+        <Header />
         <Hair />
         <Face>
           <Fringe />

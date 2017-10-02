@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  EyeWrapper,
-  EyeBrows,
-  Eye,
-  EyeOutline,
-  EyeShadow,
-} from '../styles/Eye.styles';
+import { EyeWrapper, EyeBrows, Eye } from '../styles/Eye.styles';
 
 class Eyes extends Component {
   render() {

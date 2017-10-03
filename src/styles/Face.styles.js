@@ -7,10 +7,7 @@ const Face = glamorous.div({
   width: '200px',
   background: 'linear-gradient(to right, #99c46e 50%, #add882 50%)',
   borderBottom: '6px solid #7ba650',
-  borderTopLeftRadius: '15%',
-  borderTopRightRadius: '15%',
-  borderBottomRightRadius: '25%',
-  borderBottomLeftRadius: '25%',
+  borderRadius: '15% 15% 25% 25%',
 });
 
 const Mouth = glamorous.div({
@@ -31,8 +28,7 @@ const Neck = glamorous.div({
   background: 'linear-gradient(to right, #99c46e 50%, #add882 50%)',
   borderTop: '2px solid #7ba650',
   borderBottom: '6px solid #7ba650',
-  borderBottomRightRadius: '40px',
-  borderBottomLeftRadius: '40px',
+  borderRadius: '0 0 40px 40px',
 });
 
 export { Face, Mouth, Neck };
